@@ -1,0 +1,8 @@
+.ocena{
+  float:left;
+  width:300px;
+  margin: 10px 30px;
+  border:1px solid black;
+  background-color: #666;
+  padding: 10px;
+}

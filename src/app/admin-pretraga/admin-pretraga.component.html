@@ -1,0 +1,14 @@
+<div id="search-component">
+  <h4>Pretraga admin</h4>
+  <p>Ukucaj jmbg:</p>
+
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+
+  <ul class="search-result">
+    <li *ngFor="let admin of admini$ | async" >
+      <a routerLink="/admin-detalji/{{admin.id}}">
+        {{admin.ime}} {{admin.prezime}}
+      </a>
+    </li>
+  </ul>
+</div>

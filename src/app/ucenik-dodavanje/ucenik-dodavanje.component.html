@@ -1,0 +1,30 @@
+<h3>Dodavanje novog ucenika</h3>
+
+  <div id="dodaj-ucenika">
+
+    <label>Ime ucenika:
+         <input #ime>
+    </label><br>
+    <label>Prezime ucenika:
+         <input #prezime>
+    </label><br>
+    <label>JMBG:
+         <input #jmbg>
+    </label><br>
+    <label>Datum rodjenja:
+         <input #datumRodjenja placeholder="dd-MM-yyyy">
+    </label><br>
+    <label>Odeljenje:
+         <input #oznaka>
+    </label><br>
+    <label>Ime roditelja:
+         <input #rIme>
+    </label><br>
+    <label>Prezime roditelja:
+         <input #rPrezime>
+    </label>
+
+    <button (click)="addUcenik(ime.value, prezime.value, jmbg.value, datumRodjenja.value, oznaka.value, rIme.value, rPrezime.value);
+    ime.value='';  prezime.value=''; jmbg.value=''; datumRodjenja.value=''; oznaka.value=''; rIme.value=''; rPrezime.value=''">
+  dodaj</button>
+  </div>

@@ -1,0 +1,23 @@
+<div class="ocene">
+<h3>Pregled ocena</h3>
+<table class="grade-table" *ngIf="ocene">
+  <tr>
+<th>ID</th>
+<th>TIP OCENE</th>
+<th>OCENA</th>
+<th>POLUGODISTE</th>
+<th>DATUM UNOSA</th>
+<th>IZMENA</th>
+<th>BRISANJE</th>
+  </tr>
+  <tr *ngFor="let ocena of ocene">
+<td *ngIf="ocena"><b>{{ocena.id}}</b></td>
+<td *ngIf="ocena">{{ocena.tipOcene}}</td>
+<td *ngIf="ocena">{{ocena.vrednost}}</td>
+<td *ngIf="ocena">{{ocena.polugodiste}}</td>
+<td *ngIf="ocena">{{ocena.datumUnosa}}</td>
+<td *ngIf="ocena"><a routerLink="/ocena/{{ocena.id}}"><button>Izmeni</button></a></td>
+<td *ngIf="ocena"><button (click)="deleteOcena(ocena)">Obrisi</button></td>
+  </tr>
+</table>
+</div>

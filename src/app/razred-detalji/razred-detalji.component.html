@@ -1,0 +1,18 @@
+<div *ngIf="razred">
+<h2>{{razred.brRazreda}} razred detalji</h2>
+<div><span>Broj razreda:</span>{{razred.brRazreda}}</div>
+<div><span>Skolska godina:</span>{{razred.skGodina}}</div>
+
+<div>
+<h4>Izmeni razred</h4>
+  <label>Broj razreda:
+  <input [(ngModel)] = "razred.brRazreda" placeholder="broj razreda">
+  </label><br>
+  <label>Skolska godina:
+  <input [(ngModel)] = "razred.skGodina" placeholder="skolska godina">
+  </label>
+  <button (click)="save()">Sacuvaj izmene</button><br><br>
+</div>
+</div>
+  <button (click)="goBack()">Nazad</button>
+<hr>

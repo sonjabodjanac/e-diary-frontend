@@ -1,0 +1,7 @@
+<div id="poruka">
+<div *ngIf="porukeService.poruke.length">
+  <h2>Poruke</h2>
+  <div *ngFor="let poruka of porukeService.poruke">{{poruka}}</div>
+    <button class="clear" (click)="porukeService.clear()">clear</button>
+</div>
+</div>

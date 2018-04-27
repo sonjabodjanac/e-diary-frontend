@@ -1,0 +1,36 @@
+.dashboard{
+  margin-top: 150px;
+  text-align: center;
+}
+.nav{
+  margin-left: 40px;
+    height:130px;
+}
+.nav ul{
+  list-style: none;
+
+}
+
+.nav ul li{
+  float:left;
+  width: 250px;
+  margin:0 5px;
+
+}
+
+.nav ul li a{
+  display: block;
+  padding:50px;
+  height:30px;
+  line-height: 30px;
+  background-color: #ddd;
+  text-decoration: none;
+  color:grey;
+}
+
+
+.nav ul li a:hover{
+  background-color: #607D8B;
+  color:white;
+  border-radius:10px;
+}

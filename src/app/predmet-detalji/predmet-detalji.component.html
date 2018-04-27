@@ -1,0 +1,19 @@
+<div *ngIf="predmet">
+<h2>{{predmet.naziv}} detalji</h2>
+<div><span>id:</span>{{predmet.id}}</div>
+<div><span>fond:</span>{{predmet.fond}}</div>
+
+
+<div>
+<h4>Izmeni predmet</h4>
+  <label>Naziv predmeta:
+  <input [(ngModel)] = "predmet.naziv" placeholder="naziv">
+  </label><br>
+  <label>Fond casova:
+  <input [(ngModel)] = "predmet.fond" placeholder="fond">
+  </label>
+  <button (click)="save()">Sacuvaj izmene</button>
+  <button (click)="goBack()">Nazad</button>
+</div>
+
+</div>

@@ -1,0 +1,14 @@
+<div id="search-component">
+  <h4>Pretraga prema nastavniku</h4>
+        <p>Ukucaj prezime nastavnika:</p>
+
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+
+  <ul class="search-result">
+    <li *ngFor="let nastavnik of nastavnici$ | async" >
+      <a routerLink="/admin-ocena/{{nastavnik.id}}">
+        {{nastavnik.ime}} {{nastavnik.prezime}}
+      </a>
+    </li>
+  </ul>
+</div>

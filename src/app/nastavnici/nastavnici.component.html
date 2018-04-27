@@ -1,0 +1,30 @@
+<h2>Spisak nastavnika</h2>
+<ul class="nastavnici">
+  <li *ngFor="let nastavnik of nastavnici">
+    <a routerLink="/nastavnik-detalji/{{nastavnik.id}}">
+    <span class="badge">{{nastavnik.id}}</span>{{nastavnik.ime}} {{nastavnik.prezime}}
+</a>
+<button class="delete" title="obrisi nastvnika"
+ (click)="delete(nastavnik)">x</button>
+</li>
+</ul>
+
+<div>
+  <h4>Dodaj novog nastavnika</h4>
+
+    <label>Ime:
+      <input #ime>
+    </label><br>
+    <label>Prezime:
+      <input #prezime>
+    </label><br>
+    <label>Jmbg:
+      <input #jmbg>
+    </label><br>
+    <label>Datum rodjenja:
+      <input #datumRodjenja  placeholder="dd-MM-yyyy">
+    </label><br>
+    <button (click)="add(ime.value,prezime.value,jmbg.value,datumRodjenja.value); ime.value=''; prezime.value=''; jmbg.value=''; datumRodjenja.value=''">
+  Dodaj nastavnika</button><br><br>
+  <button (click)="goBack()">Nazad</button>
+</div>

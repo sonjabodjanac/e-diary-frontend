@@ -1,0 +1,30 @@
+<h2>Spisak roditelja</h2>
+<ul class="roditelji">
+  <li *ngFor="let roditelj of roditelji">
+  <a routerLink="/roditelj-detalji/{{roditelj.id}}">
+    <span class="badge">{{roditelj.id}}</span>{{roditelj.ime}} {{roditelj.prezime}}
+</a>
+<button class="delete" title="obrisi roditelja"
+ (click)="delete(roditelj)">x</button>
+</li>
+</ul>
+
+<div>
+  <h4>Dodaj novog roditelja</h4>
+
+    <label>Ime:
+      <input #ime>
+    </label><br>
+    <label>Prezime:
+      <input #prezime>
+    </label><br>
+    <label>Jmbg:
+      <input #jmbg>
+    </label><br>
+    <label>Datum rodjenja:
+      <input #datumRodjenja placeholder="dd-MM-yyyy">
+    </label>
+    <button (click)="add(ime.value,prezime.value,jmbg.value,datumRodjenja.value); ime.value=''; prezime.value=''; jmbg.value=''; datumRodjenja.value=''">
+  Dodaj</button>
+  <button (click)="goBack()">Nazad</button>
+</div>

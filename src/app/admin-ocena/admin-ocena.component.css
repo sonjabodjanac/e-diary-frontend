@@ -1,0 +1,13 @@
+.grade-table th,td,table{
+  border:1px solid black;
+  border-collapse:collapse;
+  padding: 10px;
+}
+
+.grade-table td {
+  text-align: center;
+  background-color: #eee;
+}
+.grade-table th {
+  background-color: #607D8B;
+}

@@ -1,0 +1,23 @@
+<div *ngIf="ocena">
+<h3>Ocena detalji</h3>
+<div><span>id:</span>{{ocena.id}}</div>
+<div><span>Tip ocene:</span>{{ocena.tipOcene}}</div>
+<div><span>Vrednost:</span>{{ocena.vrednost}}</div>
+<div><span>Polugodiste:</span>{{ocena.polugodiste}}</div>
+
+
+<div>
+<h3>Izmeni ocenu</h3>
+<label>Tip Ocene:
+<input [(ngModel)] = "ocena.tipOcene" placeholder="tipOcene">
+</label><br>
+<label>Vrednost:
+<input [(ngModel)] = "ocena.vrednost" placeholder="vrednost">
+</label><br>
+<label>Polugodiste:
+<input [(ngModel)] = "ocena.polugodiste" placeholder="polugodiste">
+</label><br>
+<button (click)="save()">Sacuvaj izmene</button>
+</div>
+<button (click)="goBack()">Nazad</button>
+</div>

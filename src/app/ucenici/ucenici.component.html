@@ -1,0 +1,16 @@
+
+<h2>Ucenici</h2>
+
+  <a routerLink="/ucenik-dodavanje"><button>Dodaj novog ucenika</button></a>
+  <div *ngIf="ucenici">
+<ul class="ucenici">
+  <li *ngFor="let ucenik of ucenici">
+  <a routerLink="/ucenik-detalji/{{ucenik.id}}">
+  <span class="badge">{{ucenik.id}}</span>{{ucenik.ime}} {{ucenik.prezime}}
+</a>
+<button class="delete" title="obrisi ucenika"
+ (click)="delete(ucenik)">x</button>
+</li>
+</ul>
+  <button (click)="goBack()">Nazad</button>
+</div>

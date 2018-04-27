@@ -1,0 +1,9 @@
+<h2>Nastavnici</h2>
+<p>Odaberi nastavnika kojem zelis dodeliti predmet i odeljenje:</p>
+<ul class="nastavnici">
+  <li *ngFor="let nastavnik of nastavnici">
+    <a routerLink="/nastavnik-predaje/{{nastavnik.id}}">
+    <span class="badge">{{nastavnik.id}}</span>{{nastavnik.ime}} {{nastavnik.prezime}}
+</a>
+</li>
+</ul>

@@ -1,0 +1,27 @@
+<div *ngIf="nastavnik">
+  <h2>{{nastavnik.ime | uppercase}} {{nastavnik.prezime | uppercase}} <span>DETALJI</span></h2>
+  <div><span>Id: </span>{{nastavnik.id}}</div>
+  <div><span>Ime: </span>{{nastavnik.ime}}</div>
+  <div><span>Prezime: </span>{{nastavnik.prezime}}</div>
+  <div><span>JMBG: </span>{{nastavnik.jmbg}}</div>
+  <div><span>Datum rodjenja: </span>{{nastavnik.datumRodjenja}}</div>
+<div>
+<h3>Izmeni nastavnika</h3>
+
+    <label>Ime:
+    <input [(ngModel)] = "nastavnik.ime" placeholder="ime">
+    </label><br>
+    <label>Prezime:
+    <input [(ngModel)] = "nastavnik.prezime" placeholder="prezime">
+    </label><br>
+    <label>JMBG:
+    <input [(ngModel)] = "nastavnik.jmbg" placeholder="JMBG">
+    </label><br>
+    <label>Datum rodjenja:
+    <input [(ngModel)] = "nastavnik.datumRodjenja" placeholder="datum rodjenja">
+    </label><br><br>
+      <button (click)="save()">Sacuvaj izmene</button>
+      <button (click)="goBack()">Nazad</button>
+
+</div>
+</div>

@@ -1,0 +1,13 @@
+<div *ngIf="odeljenje">
+<h2>{{odeljenje.oznaka}} detalji</h2>
+<div><span>id:</span>{{odeljenje.id}}</div>
+<div><span>Broj razreda:</span>{{odeljenje.razred.brRazreda}}</div>
+<div><span>Skolska godina:</span>{{odeljenje.razred.skGodina}}</div>
+<h3>Izmeni odeljenje</h3>
+<label>Oznaka:
+  <input [(ngModel)]="odeljenje.oznaka" placeholder="odeljenje">
+</label>
+<button (click)="save()">Sacuvaj izmene</button>
+<button (click)="goBack()">Nazad</button>
+<hr>
+</div>

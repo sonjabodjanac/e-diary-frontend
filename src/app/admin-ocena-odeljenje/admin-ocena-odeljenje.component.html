@@ -1,0 +1,25 @@
+<div class="odeljenja">
+<h3>Odeljenja</h3>
+
+<ul class="odeljenja">
+  <li *ngFor="let odeljenje of odeljenja"
+  [class.selected]="odeljenje === selectedOdeljenje"
+  (click)="onSelect(odeljenje)" (click)="getPredmeteByOdeljenjeAndNastavnik()">
+  <span class="badge">{{odeljenje.id}}</span>{{odeljenje.oznaka}}
+</li>
+</ul>
+</div>
+<hr>
+<div class="predmeti">
+<div *ngIf="selectedOdeljenje">
+<h3>Predmeti</h3>
+<ul class="predmeti">
+  <li *ngFor="let predmet of predmeti"><a routerLink="/admin-ocena/{{nastavnikId}}/{{predmet.id}}">
+    <span class="badge">{{predmet.id}}</span>{{predmet.naziv}}
+  </a>
+</li>
+</ul>
+
+
+<button (click)="goBack()">Nazad</button>
+</div>

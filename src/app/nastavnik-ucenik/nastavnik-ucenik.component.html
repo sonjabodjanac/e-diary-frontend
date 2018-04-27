@@ -1,0 +1,9 @@
+
+<h3>Ucenici</h3>
+  <ul class="ucenici">
+    <li *ngFor="let ucenik of ucenici">
+    <a routerLink="/nastavnik/{{nastavnikId}}/{{predmetId}}/{{ucenik.id}}">
+    <span class="badge">{{ucenik.id}}</span>{{ucenik.ime}} {{ucenik.prezime}}
+  </a>
+  </li>
+  </ul>

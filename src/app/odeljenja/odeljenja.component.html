@@ -1,0 +1,26 @@
+ <h4>Odeljenja</h4>
+<ul class="odeljenja">
+<li *ngFor="let odeljenje of odeljenja">
+  <a routerLink="/odeljenje-detalji/{{odeljenje.id}}">
+  <span class="badge">{{odeljenje.id}}</span>{{odeljenje.oznaka}}
+</a>
+<button class="delete" title="obrisi odeljenje"
+ (click)="delete(odeljenje)">x</button>
+</li>
+</ul>
+
+<div>
+<h4>Dodaj novo odeljenje</h4>
+
+  <label>Oznaka:
+    <input #oznaka>
+  </label>
+  <label>Broj razreda:
+    <input #brRazreda>
+  </label>
+  <button (click)="addOdeljenje(oznaka.value, brRazreda.value); oznaka.value=''; brRazreda.value=''">
+Dodaj odeljenje</button><br><br>
+
+</div>
+
+<button (click)="goBack()">Nazad</button>

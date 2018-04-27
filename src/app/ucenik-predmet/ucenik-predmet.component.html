@@ -1,0 +1,10 @@
+<div>
+<h2>Spisak predmeta</h2>
+<ul class="predmeti">
+  <li *ngFor="let predmet of predmeti">
+    <a routerLink="/ucenik-ocena/{{ucenikId}}/{{predmet.id}}">
+  <span class="badge">{{predmet.id}}</span>{{predmet.naziv}}
+</a>
+</li>
+</ul>
+</div>

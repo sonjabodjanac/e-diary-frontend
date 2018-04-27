@@ -1,0 +1,23 @@
+<div *ngIf="selectedPredmet">
+
+  <h2>{{ocena.naziv}} detalji</h2>
+  <div><span>id:</span>{{ocena.id}}</div>
+  <div><span>polugodiste:</span>{{predmet.polugodiste}}</div>
+  <div><span>tipOcene:</span>{{ocena.tipOcene}}</div>
+    <div><span>vrednost:</span>{{ocena.vrednost}}</div>
+      <div><span>datumUnosa:</span>{{ocena.datumUnosa}}</div>
+
+        <label>Ocena:
+        <input [(ngModel)] = "ocena.vrednost" placeholder="ocena">
+      </label><br>
+      <label>tipOcene:
+      <input [(ngModel)] = "ocena.tipOcene" placeholder="tipOcene">
+    </label><br>
+    <label>Datum unosa:
+    <input [(ngModel)] = "ocena.datumUnosa" placeholder="datum unosa">
+  </label><br>
+  <label>Polugodiste:
+  <input [(ngModel)] = "ocena.polugodiste" placeholder="polugodiste">
+</label>
+  <button (click)="goBack()">Nazad</button>
+</div>

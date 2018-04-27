@@ -1,0 +1,27 @@
+<h2>Spisak predmeta</h2>
+<ul class="predmeti">
+  <li *ngFor="let predmet of predmeti">
+  <a routerLink="/predmet-detalji/{{predmet.id}}">
+  <span class="badge">{{predmet.id}}</span>{{predmet.naziv}}
+</a>
+<button class="delete" title="obrisi predmet"
+ (click)="delete(predmet)">x</button>
+</li>
+</ul>
+
+<div>
+  <h4>Dodaj novi predmet</h4>
+<table>
+  <tr>
+    <td>Naziv predmeta:</td>
+      <td><input #naziv></td>
+  </tr>
+  <tr>
+    <td>Fond:</td>
+      <td><input #fond></td>
+    <td><button (click)="addPredmet(naziv.value,fond.value); naziv.value=''; fond.value=''">
+  Dodaj predmet</button></td>
+  <td><button (click)="goBack()">Nazad</button></td>
+    </tr>
+  </table>
+</div>

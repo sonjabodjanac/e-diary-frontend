@@ -1,0 +1,63 @@
+<div class="ocena">
+<h3>Pregled ocena</h3>
+<table class="grade-table" *ngIf="ocene">
+  <tr>
+<th>ID</th>
+<th>TIP OCENE</th>
+<th>OCENA</th>
+<th>POLUGODISTE</th>
+<th>DATUM UNOSA</th>
+<th>IZMENA</th>
+<th>BRISANJE</th>
+  </tr>
+  <tr *ngFor="let ocena of ocene">
+<td *ngIf="ocena"><b>{{ocena.id}}</b></td>
+<td *ngIf="ocena">{{ocena.tipOcene}}</td>
+<td *ngIf="ocena">{{ocena.vrednost}}</td>
+<td *ngIf="ocena">{{ocena.polugodiste}}</td>
+<td *ngIf="ocena">{{ocena.datumUnosa}}</td>
+<td *ngIf="ocena"><a routerLink="/ocena/{{ocena.id}}"><button>Izmeni</button></a></td>
+<td *ngIf="ocena"><button (click)="deleteOcena(ocena)">Obrisi</button></td>
+  </tr>
+</table>
+</div>
+
+<div id="dodaj-ocenu">
+  <h3>Dodaj ocenu</h3>
+  <p>Tip ocene: 0-AKTIVNOST &nbsp;&nbsp;1-ODGOVARANJE &nbsp;&nbsp;2-KONTROLNI &nbsp;&nbsp;3-DOMACI<p>
+  <label>Tip ocene:
+       <input #tipOcene>
+  </label>
+  <label>Vrednost:
+       <input #vrednost>
+  </label>
+  <label>Polugodiste:
+       <input #polugodiste>
+  </label>
+  <button (click)="addOcena(tipOcene.value, vrednost.value, polugodiste.value);
+  tipOcene.value='';  vrednost.value=''; polugodiste.value=''">
+Dodaj</button>
+</div>
+<hr>
+<div id="zakljuci-ocenu1">
+<h3>Zakljucivanje ocene na polugodistu</h3>
+
+<label>Vrednost:
+     <input #vrednost1>
+</label>
+
+<button (click)="addOcenaPrvoPolugodiste(vrednost1.value); vrednost1.value=''">
+Zakljuci ocenu-polugodiste</button>
+</div><br>
+<hr>
+<div id="zakljuci-ocenu2">
+<h3>Zakljucivanje ocene na kraju godine</h3>
+
+<label>Vrednost:
+     <input #vrednost2>
+</label>
+
+<button (click)="addOcenaDrugoPolugodiste(vrednost2.value); vrednost2.value=''">
+Zakljuci ocenu</button>
+</div><br>
+<hr>
